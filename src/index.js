@@ -2,11 +2,37 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import BankMap from './BankMap';
+
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+
+
+function NavMenu() {
+  return (
+  <>
+  <Link to="/val" className="links">
+  Курс валют
+  </Link>
+  <Link to="/bank" className="links">
+  Отделения банка
+  </Link>
+  </>
+  );
+ }
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+
+<BrowserRouter>
+<div>
+  <NavMenu/>
+        <Switch>
+          <Route exact path="/val" component={App} />
+          <Route path="/bank" component={BankMap} />
+        </Switch>
+        </div>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

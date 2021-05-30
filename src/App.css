@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+span{
+  font-weight: 700;
+}
+
+.bankInf{
+  display: inline-flex;
+}
+
+.bankInf input{
+  height: 15px;
+  margin-top: 17px;
+  margin-left: 10px;
+}
+
+#BtnInpt{
+  width: 70px;
+  height: 20px;
+  margin-left: 164px;
+
+}
+
+.BankMap{
+  margin: 10px 10%;
+}
+
+.links{
+  text-decoration: none;
+  margin: 20px 20px;
+}
